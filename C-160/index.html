@@ -1,0 +1,73 @@
+<!--------------------------------------------------------PROJECT C-160----------------------------------------------------->
+<!----------------------------------------------------/Stairways to Heaven/----------------------------------------------------->
+
+
+<!--DOCTPYE tag-->
+<!DOCTYPE>
+
+<!--Head tag-->
+<head>
+
+    <!--Script tags (2)-->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+    <script src="scenes.js"></script>
+</head>
+
+<!--Boay tag-->
+<body>
+
+    <!--Header tag-->
+    <h1>Hello</h1>
+
+   <!--Scene tag--> 
+   <a-scene id="scene_wrld" scene-renderer >
+
+    <!--Assets tag-->
+    <a-assets>
+
+        <!--Aseet Item tags (3)-->
+        <a-asset-item response-type="arraybuffer" id="burj_khalifa_building" src="./models/burj_khalifa/scene.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="taipei_101_building" src="./models/taipei_101/scene.gltf"></a-asset-item>
+        <a-asset-item response-type="arraybuffer" id="one_world_trade_center_building" src="./models/one_world_trade_center/scene.gltf"></a-asset-item>
+    </a-assets>
+
+    <!--Introdcutory tags (10)-->
+
+    <!--~1~-->
+    <a-entity id="continue_btn" >
+    <a-entity position="0 1 -15" text="value:CLICK HERE TO CONTINUE;align:center;font:exo2bold;width:30;color:black"></a-entity>
+    <a-box color="black" opacity="0.23" position="0 0.75 -15.5" width="18" height="2" ></a-box>
+    </a-entity>
+
+    <!--~2 (i)~-->
+    <a-entity  id="intro_txt">
+    <a-entity position="0 5 -15" text="value:TALLEST SKYSCAPERS IN THE WORLD    CONCRETE STAIRWAYS TO HEAVEN;font:exo2bold;align:center;width:34;color:black"></a-entity>
+    
+    <!--~2 (ii)~-->
+    <a-entity position="0 -1 -10" text="value:The epitome of civil engineering, skyscrapers are the greatest emblem of modern life, and what it can offer;font:exo2bold;align:center;width:10;color:black"></a-entity>
+    <a-entity position="0 -3 -10" text="value:So let us explore these beauties that gleam spotlessly under the afternoon sun, which then become a thriving ecosystem in the night hosting a great vibrancy of lights;font:exo2bold;align:center;width:10;color:black"></a-entity>
+
+
+    <!--~2 (iv)~-->
+    <a-entity rotation="0 180 0" position="1.5 7 -15" scale="2 2 2" gltf-model="#burj_khalifa_building"></a-entity>
+    <a-entity rotation="0 -45 0" position="3 8.85 -17" scale="0.03 0.03 0.03" gltf-model="#taipei_101_building"></a-entity>
+    <a-entity rotation="0 -45 0" position="1 8.95 -16.7" scale="0.025 0.025 0.025" gltf-model="#one_world_trade_center_building"></a-entity>
+    </a-entity>
+    
+    <!--Camera tag (1)-->
+    <a-camera wasd-controls="enabled:false" position="0 4 0">
+
+        <!--Cursor tag-->
+        <a-cursor geometry="primitive:ring;radiusInner:0.03;radiusOuter:0.05"></a-cursor>
+    </a-camera>
+
+
+    <!--Sky tag-->
+    <a-sky id="sky_wrld" rotation="0 -90 0"  color="#89CFF0"></a-sky>
+   </a-scene>
+    
+</body>
+
+<!----------------------------------------------------/Stairways to Heaven/----------------------------------------------------->
+<!--------------------------------------------------------PROJECT C-160----------------------------------------------------->
